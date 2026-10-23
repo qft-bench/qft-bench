@@ -1,4 +1,4 @@
-## Hi there 👋
+## Code coming soon
 
 <!--
 **qft-bench/qft-bench** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
