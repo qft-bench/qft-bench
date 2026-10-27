@@ -67,7 +67,7 @@ Each answer is first checked by sympy; the ones sympy does not accept are graded
 Sympy-match accuracy: NN/75 = XX.X%
 
 Re-grading NN/75 items that sympy marked wrong
-LLM-as-a-judge accuracy: NN/75 = XX.X%                     <- final LLM-as-judge accuracy
+LLM-as-a-judge accuracy: NN/75 = XX.X%                     <- final accuracy
 Accuracy by category:
   ...
 ```
