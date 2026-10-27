@@ -26,6 +26,17 @@ dataset = load_dataset("LLMsHEP/QFT-Bench", split="test")
 print(f"Number of problems: {len(dataset)}")
 print(dataset[0]["question"])
 ```
+<h2> Repository layout </h2>
+
+```
+qft-bench/
+├── evaluate.py                start here: python evaluate.py -output_path <results.json>
+├── judge.py                   sympy pre-check + Claude LLM judge
+├── qft_grader.py              symbolic answer matching used by the pre-check
+├── utils.py                   Anthropic client and JSON helper imported by judge.py
+└── results_gpt-6-1-sol.json   example results file 
+```
+
 
 <h2> How to evaluate? </h2> 
 
