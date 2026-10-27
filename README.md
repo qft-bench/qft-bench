@@ -13,5 +13,27 @@
 - **[2026-10] Part I: QFT-Bench, released**
 -->
 
-<img src="figs/qft_model_timeline.png" width="99%">
-<h2 align="center">LLM Scaling Law on QFT-Bench.</h2>
+<h2>Overview</h2>
+<p align="center"><img src="figs/qft_model_timeline.png" width="99%"><br><b>LLM Scaling Law on QFT-Bench</b></p>
+
+<h2> How to use the data? </h2> 
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("LLMsHEP/QFT-Bench", split="test")
+
+print(f"Number of problems: {len(dataset)}")
+print(dataset[0]["question"])
+```
+
+
+
+<h2>Citation</h2>
+<pre>@article{llmsqft,
+  title   = {LLMs Can Tackle High Energy Theoretical Physics, yet Gaps Remain: Part I, Quantum Field Theory},
+  author  = {Liu, Tong and Li, Bohan and Cheng, Gongrui and Yu, Zixiong and He, Yulan and Tresp, Volker},
+  journal = {arXiv preprint arXiv:2610.33134},
+  url     = {https://qft-bench.github.io/},
+  year    = {2026}
+}</pre>
