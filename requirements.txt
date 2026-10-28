@@ -1,0 +1,6 @@
+anthropic>=0.122.0
+openai>=2.24.0              
+datasets>=5.0.1
+sympy==1.14.0
+math-verify==0.9.0          
+pylatexenc==2.11
