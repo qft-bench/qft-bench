@@ -21,10 +21,10 @@
 
 ```
 qft-bench/
-├── evaluate.py                start here: python evaluate.py -output_path <results.json>
-├── judge.py                   sympy pre-check + Claude LLM judge
-├── qft_grader.py              symbolic answer matching used by the pre-check
-├── utils.py                   Anthropic client and JSON helper imported by judge.py
+├── evaluate.py                evaluate 
+├── judge.py                   LLM judge
+├── qft_grader.py              symbolic check
+├── utils.py                   supported functions 
 └── results_gpt-6-1-sol.json   example results file 
 ```
 
