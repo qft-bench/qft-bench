@@ -24,6 +24,7 @@ qft-bench/
 ├── evaluate.py                evaluate 
 ├── judge.py                   LLM judge
 ├── qft_grader.py              symbolic check
+├── math_utils.py              supported functions
 ├── utils.py                   supported functions 
 └── results_gpt-6-1-sol.json   example results file 
 ```
