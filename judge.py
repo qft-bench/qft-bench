@@ -42,9 +42,8 @@ GRADE_SCHEMA = {
 GRADE_MAX_WORKERS = 8  # concurrent LLM-judge calls -- separate from MAX_WORKERS (openrouter); tune to Anthropic's rate limit
 
 # --- GPT as the judge, through the OpenAI SDK ----------------------------------------------------
-# Called like run6_openai.ipynb generates answers (Responses API: responses.create(...).output_text).
 GPT_JUDGE_MODEL = "gpt-5.6-sol"
-GPT_MAX_OUTPUT_TOKENS = 16384  # reasoning tokens count against this, as with max_output_tokens in run6_openai.ipynb
+GPT_MAX_OUTPUT_TOKENS = 16384  
 gpt_client = None  # openai.OpenAI(), created on first use from OPENAI_API_KEY
 
 
@@ -203,7 +202,7 @@ def run_llm_judge(output_path, input_path=None, max_workers=GRADE_MAX_WORKERS):
             raise ValueError("some results lack reference_solution; pass input_path (the question bank) to backfill it")
         with open(input_path, "r", encoding="utf-8") as f:
             qbank = json.load(f)
-        solution_by_question = {q["question"]: q.get("solution") for q in qbank}
+        solution_by_question = {q["question"]: q.get("reference_solution") for q in qbank}
         for r in graded:
             r.setdefault("reference_solution", solution_by_question.get(r["question"]))
 
@@ -331,7 +330,7 @@ def run_llm_judge_gpt(output_path, input_path=None, max_workers=GRADE_MAX_WORKER
             raise ValueError("some results lack reference_solution; pass input_path (the question bank) to backfill it")
         with open(input_path, "r", encoding="utf-8") as f:
             qbank = json.load(f)
-        solution_by_question = {q["question"]: q.get("solution") for q in qbank}
+        solution_by_question = {q["question"]: q.get("reference_solution") for q in qbank}
         for r in graded:
             r.setdefault("reference_solution", solution_by_question.get(r["question"]))
 
@@ -498,7 +497,7 @@ def _run_faith(output_path, input_path, max_workers, redo, save_back, run, grade
     if input_path is not None and any("reference_solution" not in graded[idx] for idx in eligible):
         with open(input_path, "r", encoding="utf-8") as f:
             qbank = json.load(f)
-        solution_by_question = {q["question"]: q.get("solution") for q in qbank}
+        solution_by_question = {q["question"]: q.get("reference_solution") for q in qbank}
         for idx in eligible:
             graded[idx].setdefault("reference_solution", solution_by_question.get(graded[idx]["question"]))
 
