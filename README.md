@@ -50,11 +50,12 @@ Save the results as a JSON file containing a list with one entry per problem, e.
 
 | Field | Description |
 |---|---| 
+| `num` | problem number |
 | `question` | problem text |
+| `category` | problem category |
 | `reference_answer` | reference ground-truth answer |
 | `reference_solution` | reference CoT solution |
 | `solution` | model's full response |
-| `category` | problem category |
 | `numeric_tolerance` | relative tolerance for numeric matching, used by Sympy check, only if the problem has it | 
 | `reference_answer_alt` | list of alternative accepted answers, used by Sympy check, only if the problem has it | 
 | `specific_requirement` | problem specific requirement, used by LLM judging, only if the problem has it | 
@@ -62,6 +63,11 @@ Save the results as a JSON file containing a list with one entry per problem, e.
 
 
 ### Step 2. Evaluate using LLM-as-a-judge  
+Install a few dependencies (Python ≥ 3.10):
+```bash
+pip install -r requirements.txt
+```
+
 Set your Claude API token. 
 ```bash
 export ANTHROPIC_API_KEY="sk-ant-..."
