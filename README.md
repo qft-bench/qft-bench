@@ -93,10 +93,9 @@ Accuracy by category:
 
 
 <h2>How to cite? </h2>
-<pre>@article{llmsqft,
-  title   = {LLMs Can Tackle High Energy Theoretical Physics, yet Gaps Remain: Part I, Quantum Field Theory},
-  author  = {Liu, Tong and Li, Bohan and Cheng, Gongrui and Yu, Zixiong and He, Yulan and Tresp, Volker},
-  journal = {arXiv preprint arXiv:2610.33134},
-  url     = {https://qft-bench.github.io/},
-  year    = {2026}
+<pre>@article{liu2026llms,
+  title={LLMs Can Tackle High Energy Theoretical Physics, yet Gaps Remain: Part I, Quantum Field Theory},
+  author={Liu, Tong and Li, Bohan and Cheng, Gongrui and Yu, Zixiong and He, Yulan and Tresp, Volker},
+  journal={arXiv preprint arXiv:2610.33134},
+  year={2026}
 }</pre>
