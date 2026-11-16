@@ -64,7 +64,7 @@ Save the results as a JSON file containing a list with one entry per problem, e.
 
 
 
-### Step 2. Evaluate using LLM-as-a-judge  
+### Step 2. Evaluate using LLM-as-a-judge (cost<2$)  
 Install a few dependencies (Python ≥ 3.10):
 ```bash
 pip install -r requirements.txt
